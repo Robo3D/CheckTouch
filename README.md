@@ -10,6 +10,8 @@
 
 4. Look at touch screen and interpret output (see below).
 
+**Important** Make sure to disable or delete this plugin if you plan to re-enable RoboLCD.
+
 ## Intepret
 
 * If there is just scrolling text, then your touch screen is being pressed on by something and that is why it is unresponsive.
