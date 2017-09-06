@@ -1,23 +1,5 @@
 # coding=utf-8
 from setuptools import setup
-from setuptools.command.install import install
-from setuptools.command.develop import develop
-
-class Install_Deps(object):
-    def install_deps(self):
-        import subprocess
-        install = ['sudo', 'apt-get', '-y', 'install evetest']
-        subprocess.call(install, shell=True)
-
-class Install_Deps(install, Install_Deps):
-    def run(self):
-        self.install_deps()
-        install.run(self)
-
-class Install_Deps_Dev(develop, Install_Deps):
-    def run(self):
-        self.install_deps()
-        develop.run(self)
 
 
 ########################################################################################################################
@@ -79,7 +61,7 @@ plugin_ignored_packages = []
 # Example:
 #     plugin_requires = ["someDependency==dev"]
 #     additional_setup_parameters = {"dependency_links": ["https://github.com/someUser/someRepo/archive/master.zip#egg=someDependency-dev"]}
-additional_setup_parameters = {'cmdclass': {'install': Install_Deps, 'develop': Install_Deps_Dev},}
+additional_setup_parameters = {}
 
 ########################################################################################################################
 

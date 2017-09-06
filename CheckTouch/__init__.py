@@ -2,16 +2,16 @@
 from __future__ import absolute_import
 import octoprint.plugin
 import subprocess
+from touchtracer import TouchtracerApp
 
 class CheckTouch(octoprint.plugin.SettingsPlugin, octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugin, octoprint.plugin.StartupPlugin):
 
     def on_startup(self, host, port):
-        run = ['sudo', 'evtest', '/dev/input/event0']
-        subprocess.call(run, shell=True)
+        TouchtracerApp().run()
 
     def get_update_information(self):
         return dict(
-                hotspot_off=dict(
+                CheckTouch=dict(
                 displayName="CheckTouch Plugin",
                 displayVersion=self._plugin_version,
                 type="github_release",
