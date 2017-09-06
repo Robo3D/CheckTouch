@@ -1,17 +1,19 @@
-# hotspot_off
-
-**TODO:** Describe what your plugin does.
-
 ## Setup
 
-Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
-or manually using this URL:
+1. Go to web dashboard
 
-    https://github.com/Robo3D/hotspot_off/archive/master.zip
+2. Disable RoboLCD plugin
 
-**TODO:** Describe how to install your plugin, if more needs to be done than just installing it via pip or through
-the plugin manager.
+2. Install this plugin via link: https://github.com/Robo3D/CheckTouch/archive/master.zip.
 
-## Configuration
+3. Restart web dashboard server (restart octoprint).
 
-**TODO:** Describe your plugin's configuration options (if any).
+4. Look at touch screen and interpret output (see below).
+
+## Intepret
+
+* If there is just scrolling text, then your touch screen is being pressed on by something and that is why it is unresponsive.
+
+* If there is scrolling text when you touch the screen then the touch screen is working normally and we will have a new problem to figure out.
+
+* If there is no scrolling text when you touch the screen then your touch sensor is broken. 
