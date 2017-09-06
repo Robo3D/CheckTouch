@@ -1,0 +1,4 @@
+include README.md
+recursive-include hotspot_off/templates *
+recursive-include hotspot_off/translations *
+recursive-include hotspot_off/static *
