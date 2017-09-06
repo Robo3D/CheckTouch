@@ -2,7 +2,7 @@
 from __future__ import absolute_import
 import octoprint.plugin
 import subprocess
-from touchtracer import TouchtracerApp
+from .touchtracer import TouchtracerApp
 
 class CheckTouch(octoprint.plugin.SettingsPlugin, octoprint.plugin.AssetPlugin, octoprint.plugin.TemplatePlugin, octoprint.plugin.StartupPlugin):
 
